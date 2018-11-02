@@ -1,0 +1,17 @@
+{
+  "name": "bundler-simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundler.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babylon": "^6.18.0"
+  }
+}
