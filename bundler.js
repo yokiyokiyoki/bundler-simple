@@ -1,6 +1,7 @@
 const fs = require("fs");
 const babylon = require("babylon");
 const traverse = require("babel-traverse").default;
+const babel = require("babel-core");
 
 const path = require("path");
 
@@ -19,11 +20,15 @@ function createAssets(filename) {
     }
   });
   const id = ID++;
+  const { code } = babel.transformFromAst(ast, null, {
+    presets: ["env"]
+  });
 
   return {
     id,
     filename,
-    dependencies
+    dependencies,
+    code
   };
 }
 function createGraph(entry) {
