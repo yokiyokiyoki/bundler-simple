@@ -1,5 +1,6 @@
 const fs = require("fs");
-const babylon = require("./node_modules/babylon");
+const babylon = require("babylon");
+const traverse = require("babel-traverse");
 function createAssets(filename) {
   const content = fs.readFileSync(filename, "utf-8");
   const ast = babylon.parse(content, { sourceType: "module" });
