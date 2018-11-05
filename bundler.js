@@ -31,9 +31,10 @@ function createGraph(entry) {
   const queue = [mainAsset];
 
   for (let asset of queue) {
-    let dirname = path.dirname(asset.filename);
     asset.mapping = {};
     asset.dependencies.forEach(relativePath => {
+      const dirname = path.dirname(asset.filename);
+
       const absolutePath = path.join(dirname, relativePath);
 
       const child = createAssets(absolutePath);
