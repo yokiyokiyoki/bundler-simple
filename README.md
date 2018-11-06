@@ -66,3 +66,7 @@ var xxx = require("xxx");
   return myFunc;
 });
 ```
+
+### 打包工具
+
+- 我们借助 webpack，rollup 这类工具可以在代码写 ES2015 Module 规范,然后打包成 umd 规范类代码
